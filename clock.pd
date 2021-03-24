@@ -1,0 +1,133 @@
+#N canvas 0 23 971 723 12;
+#N canvas 511 100 316 507 mainclock 1;
+#X obj 51 23 vsl 15 128 30 300 0 0 empty tempo empty 0 -9 0 10 -262144
+-1 -1 4333 1;
+#X obj 77 77 expr (60000/$f1/24), f 9;
+#X obj 77 20 nbx 5 14 1 1000 0 0 empty empty BPM 0 -8 0 10 -203904
+-1 -262144 121 256;
+#X obj 154 105 tgl 15 0 empty clocktog empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 85 323 % 16;
+#X obj 16 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 106 229 5 0 0 0 - - -;
+#X floatatom 99 195 5 0 0 0 - - -;
+#X obj 85 266 +;
+#X floatatom 58 199 5 0 0 0 - - -;
+#X msg 39 179 1;
+#X floatatom 85 294 5 0 0 0 - - -;
+#X obj 77 156 metro 100;
+#X floatatom 85 355 5 0 0 0 - - -;
+#X obj 133 323 % 4;
+#X floatatom 133 355 5 0 0 0 - - -;
+#X obj 85 385 sel 0;
+#X obj 133 385 sel 0;
+#X obj 85 414 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 133 414 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 40 433 outlet;
+#X obj 89 433 outlet;
+#X obj 138 433 outlet;
+#X obj 187 433 outlet;
+#X obj 30 219 loadbang;
+#X obj 178 66 int;
+#X obj 184 110 s clocktem;
+#X obj 17 0 tgl 15 0 empty pause empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 237 433 outlet;
+#X obj 16 31 - 1;
+#X obj 15 55 * -1;
+#X obj 241 230 del;
+#X obj 156 240 f;
+#X obj 159 177 sel 0 1;
+#X msg 238 269 0;
+#X obj 232 154 spigot;
+#X floatatom 3 135 5 0 0 0 - - -;
+#X obj 77 49 / 6;
+#X connect 0 0 25 0;
+#X connect 1 0 12 1;
+#X connect 1 0 36 0;
+#X connect 2 0 37 0;
+#X connect 3 0 12 0;
+#X connect 3 0 33 0;
+#X connect 3 0 35 1;
+#X connect 4 0 13 0;
+#X connect 5 0 10 0;
+#X connect 6 0 8 1;
+#X connect 6 0 28 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
+#X connect 8 0 11 0;
+#X connect 9 0 8 0;
+#X connect 10 0 9 0;
+#X connect 11 0 4 0;
+#X connect 12 0 5 0;
+#X connect 13 0 14 0;
+#X connect 13 0 16 0;
+#X connect 13 0 21 0;
+#X connect 14 0 15 0;
+#X connect 15 0 17 0;
+#X connect 15 0 23 0;
+#X connect 16 0 18 0;
+#X connect 17 0 19 0;
+#X connect 18 0 20 0;
+#X connect 19 0 22 0;
+#X connect 24 0 10 0;
+#X connect 24 0 34 0;
+#X connect 25 0 2 0;
+#X connect 25 0 26 0;
+#X connect 27 0 29 0;
+#X connect 29 0 30 0;
+#X connect 30 0 35 0;
+#X connect 31 0 34 0;
+#X connect 32 0 7 0;
+#X connect 32 0 11 0;
+#X connect 33 0 31 0;
+#X connect 33 1 32 0;
+#X connect 34 0 32 1;
+#X connect 35 0 12 0;
+#X connect 37 0 1 0;
+#X restore 120 261 pd mainclock;
+#X floatatom 105 149 5 0 0 0 - - -;
+#X floatatom 105 177 5 0 0 0 - - -;
+#X obj 148 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 148 179 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 105 123 tgl 15 0 clocktog empty CLOCK 0 -10 0 10 -262144 -1
+-1 1 1;
+#X obj 145 104 hsl 50 15 33 300 0 0 tempo empty empty -2 -8 0 10 -262144
+-1 -1 1597 1;
+#X floatatom 127 122 5 0 0 0 - clocktem -;
+#X obj 118 330 outlet;
+#X obj 170 329 outlet;
+#X obj 223 329 outlet;
+#X obj 275 328 outlet;
+#X obj 168 124 tgl 15 0 pause empty PAUSE 0 20 0 10 -262144 -1 -1 0
+1;
+#X obj 107 67 inlet;
+#X obj 157 67 inlet;
+#X obj 210 67 inlet;
+#X obj 325 328 outlet;
+#X obj 368 174 loadbang;
+#X msg 388 231 120;
+#X obj 356 296 s cl;
+#X floatatom 336 246 5 0 0 0 - - -;
+#X connect 0 0 3 0;
+#X connect 0 0 9 0;
+#X connect 0 1 1 0;
+#X connect 0 1 8 0;
+#X connect 0 2 4 0;
+#X connect 0 2 10 0;
+#X connect 0 3 2 0;
+#X connect 0 3 11 0;
+#X connect 0 4 16 0;
+#X connect 0 4 19 0;
+#X connect 0 4 20 0;
+#X connect 13 0 5 0;
+#X connect 14 0 6 0;
+#X connect 15 0 12 0;
+#X connect 17 0 18 0;
+#X connect 18 0 6 0;
+#X coords 0 -1 1 1 100 100 2 100 100;
