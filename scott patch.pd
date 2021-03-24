@@ -1,0 +1,12 @@
+#N canvas 0 23 127 367 12;
+#X obj 86 12 adc~;
+#X obj 24 64 channelst;
+#X obj 3 342 dac~ 1 2 3 4 5 6;
+#X connect 0 0 1 4;
+#X connect 0 1 1 5;
+#X connect 1 0 2 0;
+#X connect 1 0 2 4;
+#X connect 1 0 2 2;
+#X connect 1 1 2 1;
+#X connect 1 1 2 5;
+#X connect 1 1 2 3;

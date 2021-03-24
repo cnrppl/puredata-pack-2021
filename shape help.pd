@@ -1,0 +1,15 @@
+#N canvas 271 241 450 300 12;
+#X obj 303 86 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 75 44 channelst;
+#X obj 253 124 shape;
+#X obj 259 191 shape;
+#X obj 246 33 adc~;
+#X connect 0 0 2 1;
+#X connect 0 0 3 1;
+#X connect 2 0 3 0;
+#X connect 2 1 3 2;
+#X connect 3 0 1 4;
+#X connect 3 1 1 5;
+#X connect 4 0 2 0;
+#X connect 4 0 2 2;
