@@ -1,0 +1,49 @@
+#N canvas 0 23 767 602 12;
+#X obj 96 132 oscparse;
+#X obj 96 103 netreceive -u -b;
+#X msg 96 71 listen 5000;
+#X obj 96 163 list trim;
+#X obj 96 191 route ZIGSIM;
+#X obj 96 218 route uPBTDGY4fa2mBv9y;
+#X obj 96 277 unpack 0 0 0 0;
+#X obj 96 309 vsl 15 128 -1 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 127 309 vsl 15 128 -1 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 159 310 vsl 15 128 -1 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 96 247 route quaternion;
+#X obj 191 309 vsl 15 128 -1 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 202 191 print get;
+#X msg 495 332 disconnect;
+#X obj 476 358 netsend -u -b;
+#X msg 485 307 connect localhost 5000;
+#X obj 477 257 list prepend send;
+#X obj 477 282 list trim;
+#X obj 478 216 oscformat kn1;
+#X obj 526 60 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 373 189 route kn1;
+#X obj 363 271 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 3 0 12 0;
+#X connect 3 0 20 0;
+#X connect 4 0 5 0;
+#X connect 5 0 10 0;
+#X connect 6 0 7 0;
+#X connect 6 1 8 0;
+#X connect 6 2 9 0;
+#X connect 6 3 11 0;
+#X connect 10 0 6 0;
+#X connect 13 0 14 0;
+#X connect 15 0 14 0;
+#X connect 16 0 17 0;
+#X connect 17 0 14 0;
+#X connect 18 0 16 0;
+#X connect 19 0 18 0;
+#X connect 20 0 21 0;

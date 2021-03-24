@@ -1,0 +1,7 @@
+#N canvas 0 23 949 300 12;
+#X obj 130 152 gemwin;
+#X msg 148 88 destroy;
+#X msg 130 58 reset \, dimen 500 500 \, fullscreen 1 \, border 0 \,
+create \, 1;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;

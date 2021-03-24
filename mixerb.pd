@@ -1,0 +1,16 @@
+#N canvas 69 23 1297 723 12;
+#N canvas 68 23 919 628 init 0;
+#X msg 13 98 \; pd dsp 1;
+#X obj 12 7 loadbang;
+#X connect 1 0 0 0;
+#X restore 4 4 pd init;
+#X obj 110 437 vsl 30 150 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 102 41 inlet;
+#X obj 168 41 inlet;
+#X obj 236 40 inlet;
+#X obj 301 40 inlet;
+#X obj 367 40 inlet;
+#X obj 435 39 inlet;
+#X text 921 102 comment;
+#X coords 0 -1 1 1 800 500 1 100 100;
